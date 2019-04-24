@@ -80,7 +80,7 @@ export default class CustomTabBarExample extends React.Component<*, State> {
         return (
           <TouchableWithoutFeedback
             key={route.key}
-            onPress={() => props.jumpTo(route.key)}
+            onPressIn={() => props.jumpTo(route.key)}
           >
             {this._renderItem(props)({ route, index })}
           </TouchableWithoutFeedback>

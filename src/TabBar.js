@@ -351,7 +351,7 @@ export default class TabBar<T: Route> extends React.Component<Props<T>, State> {
                 inactiveColor={inactiveColor}
                 pressColor={pressColor}
                 pressOpacity={pressOpacity}
-                onPress={() => {
+                onPressIn={() => {
                   onTabPress && onTabPress({ route });
                   this.props.jumpTo(route.key);
                 }}

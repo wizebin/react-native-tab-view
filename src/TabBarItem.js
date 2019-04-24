@@ -35,6 +35,7 @@ type Props<T> = {|
   |}) => React.Node,
   renderBadge?: (scene: Scene<T>) => React.Node,
   onPress: () => mixed,
+  onPressIn: () => mixed,
   onLongPress: () => mixed,
   tabWidth: number,
   labelStyle?: TextStyleProp,
@@ -64,6 +65,7 @@ export default function TabBarItem<T: Route>({
   style,
   tabWidth,
   onPress,
+  onPressIn,
   onLongPress,
 }: Props<T>) {
   const tabIndex = navigationState.routes.indexOf(route);
@@ -199,6 +201,7 @@ export default function TabBarItem<T: Route>({
       pressOpacity={pressOpacity}
       delayPressIn={0}
       onPress={onPress}
+      onPressIn={onPressIn}
       onLongPress={onLongPress}
       style={tabContainerStyle}
     >

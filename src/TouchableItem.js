@@ -11,6 +11,7 @@ import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet
 
 type Props = {
   onPress: () => mixed,
+  onPressIn: () => mixed,
   delayPressIn?: number,
   borderless?: boolean,
   pressColor?: string,

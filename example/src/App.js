@@ -107,7 +107,7 @@ export default class ExampleList extends React.Component<{}, State> {
       <TouchableOpacity
         key={i}
         style={styles.touchable}
-        onPress={() => this._handleNavigate(i)}
+        onPressIn={() => this._handleNavigate(i)}
       >
         <Text style={styles.item}>
           {i + 1}. {component.title}
@@ -170,7 +170,7 @@ export default class ExampleList extends React.Component<{}, State> {
           {index > -1 ? (
             <TouchableOpacity
               style={styles.button}
-              onPress={this._handleNavigateBack}
+              onPressIn={this._handleNavigateBack}
             >
               <Ionicons
                 name={
