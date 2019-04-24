@@ -35,7 +35,6 @@ type Props<T> = {|
   |}) => React.Node,
   renderBadge?: (scene: Scene<T>) => React.Node,
   onPress: () => mixed,
-  onPressIn: () => mixed,
   onLongPress: () => mixed,
   tabWidth: number,
   labelStyle?: TextStyleProp,
@@ -65,7 +64,6 @@ export default function TabBarItem<T: Route>({
   style,
   tabWidth,
   onPress,
-  onPressIn,
   onLongPress,
 }: Props<T>) {
   const tabIndex = navigationState.routes.indexOf(route);
@@ -122,7 +120,6 @@ export default function TabBarItem<T: Route>({
               <Animated.Text
                 style={[
                   styles.label,
-                  // eslint-disable-next-line react-native/no-inline-styles
                   icon && { marginTop: 0 },
                   { color },
                   labelStyle,
@@ -200,8 +197,7 @@ export default function TabBarItem<T: Route>({
       pressColor={pressColor}
       pressOpacity={pressOpacity}
       delayPressIn={0}
-      onPress={onPress}
-      onPressIn={onPressIn}
+      onPressIn={onPress}
       onLongPress={onLongPress}
       style={tabContainerStyle}
     >
