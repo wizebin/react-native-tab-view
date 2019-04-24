@@ -53,8 +53,6 @@ export default class TabView<T: Route> extends React.Component<
     swipeEnabled: true,
     lazy: false,
     removeClippedSubviews: false,
-    springConfig: {},
-    timingConfig: {},
   };
 
   state = {
@@ -96,8 +94,6 @@ export default class TabView<T: Route> extends React.Component<
       swipeEnabled,
       swipeDistanceThreshold,
       swipeVelocityThreshold,
-      timingConfig,
-      springConfig,
       tabBarPosition,
       renderTabBar,
       renderScene,
@@ -116,8 +112,6 @@ export default class TabView<T: Route> extends React.Component<
           swipeEnabled={swipeEnabled}
           swipeDistanceThreshold={swipeDistanceThreshold}
           swipeVelocityThreshold={swipeVelocityThreshold}
-          timingConfig={timingConfig}
-          springConfig={springConfig}
           onSwipeStart={onSwipeStart}
           onSwipeEnd={onSwipeEnd}
           onIndexChange={this._jumpToIndex}
